@@ -8,16 +8,12 @@ In this example, we will look at the dataset from the 2012 PhysioNet/Computing i
 
 The raw dataset can be found on the challenge website linked above. However, for this tutorial, we did a little preprocessing for you so we spend less time on data munging. If you want to know more about what we did, see the section at the end (TODO: put section name here).
 
-We will be using only the training set from the challenge because that's the only labelled dataset available to the public.
-
-(TODO: Split data into train/test set)
-
-The data is stored as a CSV.
+We provide a training set and a test set. The data is stored as a CSV. Let's load the training set.
 
     import csv
 
     data = []
-    with open('test.csv') as csvfile:
+    with open('train-a.csv') as csvfile:
         reader = csv.reader(csvfile)
         # Read header
         header = reader.next()
@@ -32,7 +28,7 @@ We have fields like `Age`, `Gender`, `ICUType` and `Height` which only have one 
 
 The outcome field is `In-hospital_death`. 1 means the patient died in the hospital. 0 means the patient survived.
 
-Let's separate the features from the outcome. We'll be using scikit-learn's machine learning tools in this tutorial and numpy is a useful library for ??
+Let's separate the features from the outcome. We'll be using scikit-learn's machine learning tools in this tutorial and numpy is a useful library for scientific computing.
 
     import numpy
     features = numpy.array([f[0:-1] for f in data])
@@ -103,9 +99,20 @@ Instead, we can plot the precision-recall curve. TODO: explain precision/recall.
 
 #### Cross Validation
 
+Scikit-learn has a library of utilities for cross-validation and performance evaluation in the `sklearn.cross-validation module`. It has several classes automatically generate different splits of the training set. We will be using the `StratifiedKFold` iterator, which splits the data into *n* folds. *n - 1* folds are used for training, and the *nth* fold is used for test. A stratified K-fold maintains approximately the same percentage of each outcome class as in the complete set.
+
+    from sklearn.cross_validation import StratifiedKFold
+    skf = StratifiedKFold(labels, 10)
+    for train, test in skf:
+        X_train = features[train]
+        y_train = labels[train]
+        X_test = features[test]
+        y_test = labels[test]
 
 ## Feature Engineering
 
 Raw data is not a nice csv. How did we preprocess the data?
+
+We only used the training set from the challenge because that's the only labelled dataset available to the public.
 
 TODO: insert code for processing of raw dataset from Physionet website.
