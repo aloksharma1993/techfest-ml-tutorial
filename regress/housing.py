@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-#from sklearn.feature_selection import VarianceThreshold
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import linear_model
@@ -8,6 +8,10 @@ from sklearn import linear_model
 See
 
 https://archive.ics.uci.edu/ml/machine-learning-databases/housing/
+
+and
+
+http://blog.datadive.net/selecting-good-features-part-i-univariate-selection/
 
 1. Title: Boston Housing Data
 
