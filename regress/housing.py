@@ -85,6 +85,7 @@ FIELDS = [ ['CRIM',      'per capita crime rate by town'],
 
 def main():
   """Read file estimate housing prices"""
+  print 'My main'
   fp_house = open('../data/housing.data', 'r')
   X_train = []
   y_train = []
