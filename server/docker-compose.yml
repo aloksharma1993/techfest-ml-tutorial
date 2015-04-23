@@ -1,0 +1,15 @@
+notebookserver:
+  image: ipython/scipyserver
+  ports:
+    - 8888:8888
+    - 8000:8000
+  environment:
+    - PASSWORD=4
+    - IPYTHONDIR=/userdata
+  volumes:
+   - ./notebooks:/notebooks
+  # - ./userdata:/userdata
+  # - reveal.js:/notebooks/reveal.js
+  # - notebook_profile:/root/.ipython/profile_default
+  # - notebook_profile:/userdata/profile_techfest
+  # - notebook_profile:/root/.ipython/arsenn
