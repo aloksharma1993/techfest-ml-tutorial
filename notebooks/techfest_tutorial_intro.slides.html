@@ -220,7 +220,7 @@ div.output_prompt {
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="o">%%</span><span class="k">html</span> &quot;static/foundation-5.5.1.css&quot;
+<div class=" highlight hl-ipython2"><pre><span class="c"># %%html &quot;static/foundation-5.5.1.css&quot;</span>
 </pre></div>
 
 </div>
@@ -430,9 +430,7 @@ hidden structure in the data.</li>
 </div>
 </div>
 </div>
-    </aside></section>
-    </section><section>
-    <section>
+    </aside></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -479,8 +477,8 @@ hidden structure in the data.</li>
     <p class="small-6 columns"> Classification </p>
 </div>
 <div class="row">
-    <img class="small-6 columns" src="/media/ox_regression.png" />
-    <img class="small-6 columns" src="/media/ox_classification.png" />
+    <img class="small-6 columns" src="media/ox_regression.png" />
+    <img class="small-6 columns" src="media/ox_classification.png" />
 </div>
 
 <ul>
@@ -530,7 +528,7 @@ hidden structure in the data.</li>
 </ul>
 <p>Goal</p>
 <ul>
-<li>dedude some structure of the data and predict (is this true?) based on that data</li>
+<li>deduce some structure of the data and predict (is this true?) based on that data</li>
 </ul>
 
 </div>
@@ -650,12 +648,32 @@ is often used for data visualization. What is this used for? compression?</li>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-is-ML-done">How is ML done<a class="anchor-link" href="#How-is-ML-done">&#182;</a></h2><h4 id="TODO:-Fix-this-list">TODO: Fix this list<a class="anchor-link" href="#TODO:-Fix-this-list">&#182;</a></h4><ol>
-<li>get data</li>
-<li>clean data</li>
-<li>feature engineering</li>
-<li>fitting a model</li>
-<li>predicting</li>
+<h2 id="How-is-ML-done">How is ML done<a class="anchor-link" href="#How-is-ML-done">&#182;</a></h2><p><img class="small-11" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT8TqGzN7vGVBzw2O5iAG-luBv92jL6ngtJJvf6VyJ8qyq98Aru" /></p>
+<ol>
+<li>Get data</li>
+<li>Clean data</li>
+<li>Data Transformation (feature engineering)</li>
+<li>Fitting a model (Data Mining)</li>
+<li>Predicting</li>
+<li>Deploying the model</li>
+</ol>
+
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="We-will-focus">We will focus<a class="anchor-link" href="#We-will-focus">&#182;</a></h3><ol>
+<li>Get data</li>
+<li>Clean data</li>
+<li><strong>Data Transformation (feature engineering)</strong></li>
+<li><strong>Fit a model (Data Mining)</strong></li>
+<li><strong>Predicting</strong></li>
+<li>Deploying the model</li>
 </ol>
 
 </div>
@@ -669,7 +687,11 @@ is often used for data visualization. What is this used for? compression?</li>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-Transformation-(Feature-Engineering)">Data Transformation (Feature Engineering)<a class="anchor-link" href="#Data-Transformation-(Feature-Engineering)">&#182;</a></h2>
+<h2 id="Data-Transformation-(Feature-Engineering)">Data Transformation (Feature Engineering)<a class="anchor-link" href="#Data-Transformation-(Feature-Engineering)">&#182;</a></h2><div class="row">
+    <img class="small-5 columns" src="media/gata.jpg" />
+    <span class="small-2 small-centered columns"> -> </span>
+    <img class="small-5 columns" src="media/gata.jpg" />
+</div>
 </div>
 </div>
 </div><aside class="notes">
@@ -685,6 +707,47 @@ is often used for data visualization. What is this used for? compression?</li>
 <li>in computer vision, computing SIFT features on each frame of a video sequence for autonomous navigation.</li>
 <li>for facial recognition, computing eigenfaces from an image. This greatly reduces the dimension of the data.</li>
 <li>computing aggregate statistics over user activity data (number of logins in past day, number of distinct page visits)</li>
+</ul>
+
+</div>
+</div>
+</div>
+    </aside></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Why-can't-we-use-original-data?">Why can't we use original data?<a class="anchor-link" href="#Why-can't-we-use-original-data?">&#182;</a></h3><ul>
+<li>It could be <strong>scattered</strong>. We need to <strong>consolidate</strong> the data</li>
+<li>computer can't interpret the raw data. We have to guide it, transform the data into machine understandable format (construct features)</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="What-are-features?">What are features?<a class="anchor-link" href="#What-are-features?">&#182;</a></h3><ul>
+<li>Each feature is</li>
+</ul>
+
+</div>
+</div>
+</div><aside class="notes">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="What-are-features?">What are features?<a class="anchor-link" href="#What-are-features?">&#182;</a></h3><ul>
+<li>Each feature is <strong>something</strong></li>
 </ul>
 
 </div>
