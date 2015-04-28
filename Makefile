@@ -17,8 +17,10 @@ copy_presentation_html: dump_presentation_html
 	cp notebooks/techfest_tutorial_intro.slides.html presentation/intro_presentation.html
 
 dev_presentation: copy_presentation_html
-	cd presentation && ln -sf ../intro/media media
-	cd presentation && ln -sf ../intro/static/foundation-5.5.1.css custom.css
+	cd presentation && rm -f media custom.css index.html
+	cd presentation && ln -s ../intro/media media 
+	cd presentation && ln -s ../intro/static/foundation-5.5.1.css custom.css
+	cd presentation && ln -s ../notebooks/techfest_tutorial_intro.slides.html index.html
 	cd presentation && python -m SimpleHTTPServer 8000
 
 presentation_80: copy_presentation_html
