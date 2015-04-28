@@ -12,8 +12,7 @@ dump_presentation_html: clean
 
 clean:
 	find . -type f -name "*.pyc" -delete
-	find presentation.html
 
 presentation: dump_presentation_html 
 	cp notebooks/techfest_tutorial_intro.slides.html presentation.html
-	python -m SimpleHTTPServer 8000
+	python -m SimpleHTTPServer 80

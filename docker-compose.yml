@@ -2,9 +2,9 @@ notebookserver:
   image: ipython/scipyserver
   ports:
     - 8888:8888
-    - 8000:8000
+    - 8443:8888
   environment:
-    - PASSWORD=4
+    - PASSWORD=
     - IPYTHONDIR=/userdata
   volumes:
    - notebooks:/notebooks
