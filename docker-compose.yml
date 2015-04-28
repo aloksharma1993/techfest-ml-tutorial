@@ -8,7 +8,7 @@ notebookserver:
     - IPYTHONDIR=/userdata
   volumes:
    - notebooks:/notebooks
-   - media:/notebooks/media
+   - server/media:/notebooks/media
   #  - static:/notebooks/static
   # - ./userdata:/userdata
   # - reveal.js:/notebooks/reveal.js
