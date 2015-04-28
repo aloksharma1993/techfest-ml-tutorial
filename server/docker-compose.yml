@@ -7,7 +7,8 @@ notebookserver:
     - PASSWORD=4
     - IPYTHONDIR=/userdata
   volumes:
-   - ./notebooks:/notebooks
+   - notebooks:/notebooks
+   - media:/notebooks/media
   # - ./userdata:/userdata
   # - reveal.js:/notebooks/reveal.js
   # - notebook_profile:/root/.ipython/profile_default
