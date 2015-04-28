@@ -9,7 +9,7 @@ notebookserver:
   volumes:
    - notebooks:/notebooks
    - server/media:/notebooks/media
-  #  - static:/notebooks/static
+   - server/static:/notebooks/static
   # - ./userdata:/userdata
   # - reveal.js:/notebooks/reveal.js
   # - notebook_profile:/root/.ipython/profile_default
