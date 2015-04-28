@@ -8,10 +8,6 @@ notebookserver:
     - IPYTHONDIR=/userdata
   volumes:
    - notebooks:/notebooks
-   - server/media:/notebooks/media
-   - server/static:/notebooks/static
-  # - ./userdata:/userdata
+   - intro/media:/notebooks/media
+   - intro/static:/notebooks/static
    - intro/reveal.js:/notebooks/reveal.js
-  # - notebook_profile:/root/.ipython/profile_default
-  # - notebook_profile:/userdata/profile_techfest
-  # - notebook_profile:/root/.ipython/arsenn
