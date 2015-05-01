@@ -10,6 +10,9 @@ server_html:
 dump_presentation_html: clean
 	docker-compose run notebookserver ipython nbconvert techfest_tutorial_intro.ipynb --to slides
 
+pdf: clean
+	docker-compose run notebookserver ipython nbconvert techfest_tutorial_intro.ipynb --to pdf
+
 clean:
 	find . -type f -name "*.pyc" -delete
 
