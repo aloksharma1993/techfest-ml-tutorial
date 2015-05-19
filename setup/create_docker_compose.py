@@ -6,6 +6,8 @@ compose_yml_template = """server{port}:
     - {port}:8888
   environment:
     - PASSWORD={password}
+  volumes:
+   - regress:/notebooks/housing_exmaple
 """
 
 if __name__ == '__main__':

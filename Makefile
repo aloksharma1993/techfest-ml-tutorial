@@ -26,3 +26,14 @@ dev_presentation: copy_presentation_html
 presentation_80: copy_presentation_html
 	cd presentation
 	sudo python -m SimpleHTTPServer 80
+
+multiserver: buildmultiserver runmultiserver
+
+buildmultiserver:
+	docker-compose -f multy_compose.yml build
+
+runmultiserver:
+	docker-compose -f multy_compose.yml up -d
+
+stopmultiserver:
+	docker-compose -f multy_compose.yml stop
