@@ -7,6 +7,7 @@ if __name__ == '__main__':
     reader = csv.reader(infile)
     with open('setup/pretty_ports.csv', 'w') as outfile:
       writer = csv.writer(outfile)
+      writer.writerow(['', '', ''])
       for port, password in reader:
         writer.writerow(['ipython notebook server url', '', 'password'])
         writer.writerow(['', '', ''])
